@@ -6,12 +6,12 @@
   <title>Blackbird Projects | Custom Homes & Renovations</title>
   <meta
     name="description"
-    content="Blackbird Projects delivers custom homes, renovations, bathrooms, and maintenance across Toowoomba and the Darling Downs with care, clarity, and craftsmanship."
+    content="Blackbird Projects creates custom homes, renovations, bathrooms, and residential maintenance across Toowoomba and the Darling Downs with craftsmanship, clarity, and architectural care."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="styles.css">
@@ -20,229 +20,383 @@
   <header class="site-header" id="top">
     <div class="container nav-shell">
       <a class="brand" href="#top" aria-label="Blackbird Projects home">
-        <span class="brand-mark">B</span>
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/logo-blackbird-provided.png" alt="">
+        </span>
         <span class="brand-text">
           <strong>Blackbird</strong>
           <span>Projects</span>
         </span>
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        Menu
-      </button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
         <a href="#services">Services</a>
-        <a href="#work">Featured Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#craftsmanship">Craftsmanship</a>
         <a href="#why-blackbird">Why Blackbird</a>
-        <a href="#testimonials">Testimonials</a>
-        <a class="nav-cta" href="#contact">Start Your Project</a>
+        <a href="#contact" class="nav-cta magnetic">Start Your Project</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-media">
+      <div class="hero-media media-layer" data-depth="18">
         <img src="https://blackbirdprojects.au/wp-content/uploads/2025/01/474437945_582353898053900_630055679955442983_n.jpg" alt="Blackbird Projects residential exterior">
       </div>
       <div class="hero-overlay"></div>
+      <div class="hero-gridline"></div>
+      <div class="hero-glow hero-glow-left"></div>
+      <div class="hero-glow hero-glow-right"></div>
       <div class="container hero-content">
-        <div class="eyebrow reveal">Residential Builder | Toowoomba & Darling Downs</div>
-        <div class="hero-grid">
-          <div class="hero-copy reveal">
-            <h1 id="hero-title">Built with care. Designed to last.</h1>
+        <div class="hero-topline reveal">
+          <span class="eyebrow">Residential Builder | Toowoomba & Darling Downs</span>
+          <div class="hero-tags">
+            <span>Custom Homes</span>
+            <span>Renovations</span>
+            <span>Bathrooms</span>
+            <span>Maintenance</span>
           </div>
-          <div class="hero-card reveal">
+        </div>
+        <div class="hero-layout">
+          <div class="hero-copy reveal">
+            <p class="hero-intro">Architectural storytelling, built for real life.</p>
+            <h1 id="hero-title">
+              <span>Homes with</span>
+              <span>substance.</span>
+              <span>Spaces with soul.</span>
+            </h1>
+          </div>
+          <aside class="hero-panel glass-panel reveal media-layer" data-depth="9">
             <p>
-              Custom homes, renovations, bathrooms, and maintenance across Toowoomba and the
-              Darling Downs, delivered with craftsmanship, clarity, and lasting quality.
+              Blackbird Projects delivers custom homes, renovations, bathrooms, and ongoing residential
+              care with measured execution, clear communication, and a strong eye for finish.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#contact">Start Your Project</a>
-              <a class="button button-secondary" href="#work">View Our Work</a>
+              <a class="button button-primary magnetic" href="#contact">Start Your Project</a>
+              <a class="button button-secondary magnetic" href="#projects">View Our Work</a>
             </div>
-          </div>
+            <div class="hero-metrics">
+              <div>
+                <strong>Local</strong>
+                <span>Built for Toowoomba living</span>
+              </div>
+              <div>
+                <strong>Crafted</strong>
+                <span>Detail that holds up over time</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="hero-floating hero-floating-left glass-panel reveal media-layer" data-depth="14">
+          <span class="floating-label">Project Care</span>
+          <p>From first site conversation to final handover, the process stays calm, clear, and well managed.</p>
+        </div>
+        <div class="hero-floating hero-floating-right reveal media-layer" data-depth="12">
+          <img src="https://blackbirdprojects.au/wp-content/uploads/2025/04/ktichen-image-1024x683.jpg" alt="Blackbird Projects kitchen renovation">
+          <div class="floating-caption">Renovations that feel integrated, not added on.</div>
         </div>
       </div>
     </section>
 
-    <section class="trust-strip">
-      <div class="container trust-grid reveal-group">
-        <article class="trust-item reveal">
-          <span class="trust-label">Local</span>
-          <p>Built for Toowoomba homes, climate, and lifestyle.</p>
+    <section class="trust-band">
+      <div class="container trust-cards reveal-group">
+        <article class="trust-card reveal">
+          <span class="trust-index">01</span>
+          <h2>Local insight</h2>
+          <p>Homes shaped for the way Toowoomba families live, gather, and grow.</p>
         </article>
-        <article class="trust-item reveal">
-          <span class="trust-label">Crafted</span>
-          <p>Careful detailing, quality materials, and practical decisions.</p>
+        <article class="trust-card reveal">
+          <span class="trust-index">02</span>
+          <h2>Clear delivery</h2>
+          <p>Transparent communication, honest sequencing, and no vague process.</p>
         </article>
-        <article class="trust-item reveal">
-          <span class="trust-label">Clear</span>
-          <p>Transparent communication from first conversation to final handover.</p>
+        <article class="trust-card reveal">
+          <span class="trust-index">03</span>
+          <h2>Built detail</h2>
+          <p>Timber, stone, lighting, and finishes resolved with care, not rushed through.</p>
         </article>
-        <article class="trust-item reveal">
-          <span class="trust-label">Complete</span>
-          <p>End-to-end support across new homes, renovations, bathrooms, and maintenance.</p>
+        <article class="trust-card reveal">
+          <span class="trust-index">04</span>
+          <h2>End-to-end scope</h2>
+          <p>New homes, renovations, bathrooms, and maintenance handled under one roof.</p>
         </article>
       </div>
     </section>
 
-    <section class="section services" id="services">
+    <section class="section editorial-section services-section" id="services">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading editorial-heading reveal">
           <span class="section-kicker">Services</span>
-          <h2>Thoughtful building services, delivered with a steady hand.</h2>
-          <p>Focused on residential work that feels resolved, durable, and genuinely lived in.</p>
+          <h2>Residential building, composed with more depth than a standard contractor brief.</h2>
+          <p>Each service is treated as a design and delivery problem to solve properly, not a package to rush through.</p>
         </div>
-        <div class="service-grid reveal-group">
-          <article class="service-card reveal">
-            <div class="service-image">
-              <img src="https://blackbirdprojects.au/wp-content/uploads/2025/01/blackbird-projects.jpg" alt="Blackbird Projects custom home exterior">
-            </div>
-            <div class="service-body">
-              <h3>New Homes</h3>
-              <p>Custom homes shaped around site, lifestyle, and lasting performance.</p>
-            </div>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-image">
-              <img src="https://blackbirdprojects.au/wp-content/uploads/2025/04/ktichen-image-1024x683.jpg" alt="Blackbird Projects renovation kitchen and living space">
-            </div>
-            <div class="service-body">
-              <h3>Renovations and Extensions</h3>
-              <p>Carefully integrated additions and upgrades that feel considered from day one.</p>
+        <div class="services-showcase reveal-group">
+          <article class="service-card service-card-large reveal tilt-card" data-tilt>
+            <img src="https://blackbirdprojects.au/wp-content/uploads/2025/01/blackbird-projects.jpg" alt="Blackbird Projects custom home exterior">
+            <div class="service-sheen"></div>
+            <div class="service-overlay">
+              <span class="service-tag">New Homes</span>
+              <h3>Custom homes with weight, warmth, and lasting presence.</h3>
+              <p>Thoughtful planning, grounded detailing, and a home that feels settled from the start.</p>
             </div>
           </article>
-          <article class="service-card reveal">
-            <div class="service-image">
-              <img src="https://blackbirdprojects.au/wp-content/uploads/2025/04/image-2-1.png" alt="Blackbird Projects bathroom renovation">
-            </div>
-            <div class="service-body">
-              <h3>Bathrooms</h3>
-              <p>Refined bathroom spaces with practical layouts, durable finishes, and detail.</p>
+          <article class="service-card reveal tilt-card" data-tilt>
+            <img src="https://blackbirdprojects.au/wp-content/uploads/2025/04/ktichen-image-1024x683.jpg" alt="Blackbird Projects renovation kitchen and living space">
+            <div class="service-sheen"></div>
+            <div class="service-overlay">
+              <span class="service-tag">Renovations and Extensions</span>
+              <h3>Existing homes, reworked with flow and restraint.</h3>
+              <p>Extensions and internal transformations that feel natural to the original home.</p>
             </div>
           </article>
-          <article class="service-card reveal">
-            <div class="service-image">
-              <img src="https://blackbirdprojects.au/wp-content/uploads/2025/01/measure-up.jpg" alt="Blackbird Projects maintenance and finishing work">
+          <article class="service-card reveal tilt-card" data-tilt>
+            <img src="https://blackbirdprojects.au/wp-content/uploads/2025/04/image-2-1.png" alt="Blackbird Projects bathroom renovation">
+            <div class="service-sheen"></div>
+            <div class="service-overlay">
+              <span class="service-tag">Bathrooms</span>
+              <h3>Material-rich bathrooms that balance calm and practicality.</h3>
+              <p>Layouts, joinery, and finishes designed to feel refined and durable every day.</p>
             </div>
-            <div class="service-body">
-              <h3>Maintenance</h3>
-              <p>Reliable residential maintenance handled with the same care as larger projects.</p>
+          </article>
+          <article class="service-card reveal tilt-card" data-tilt>
+            <img src="https://blackbirdprojects.au/wp-content/uploads/2025/01/measure-up.jpg" alt="Blackbird Projects maintenance and finishing work">
+            <div class="service-sheen"></div>
+            <div class="service-overlay">
+              <span class="service-tag">Maintenance</span>
+              <h3>Ongoing residential care delivered with the same attention to finish.</h3>
+              <p>Reliable, measured support for the work that keeps a home performing properly.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section featured-work" id="work">
-      <div class="container work-layout">
+    <section class="section projects-section" id="projects">
+      <div class="container projects-layout">
         <div class="section-heading reveal">
-          <span class="section-kicker">Featured Work</span>
-          <h2>Selected projects that reflect how we build.</h2>
-          <p>Warm materials, clean detailing, and spaces designed to feel settled for years to come.</p>
+          <span class="section-kicker">Featured Projects</span>
+          <h2>Proof of quality should feel visual, tactile, and easy to explore.</h2>
+          <p>Selected work across new homes, renovations, and bathrooms, presented with an editorial rhythm rather than a flat gallery.</p>
         </div>
-        <div class="work-grid reveal-group">
-          <article class="work-card work-card-large reveal">
+        <div class="projects-collage reveal-group">
+          <article class="project-card project-hero reveal tilt-card" data-tilt>
             <img src="https://blackbirdprojects.au/wp-content/uploads/2025/01/blackbird-projects.jpg" alt="Blackbird Projects completed home exterior">
-            <div class="work-meta">
-              <span>New Home</span>
+            <div class="project-mask"></div>
+            <div class="project-meta">
+              <span>Custom Home</span>
               <h3>Range House</h3>
+              <p>Warm exterior lighting, grounded material tones, and a calm street presence.</p>
             </div>
           </article>
-          <article class="work-card reveal">
+          <article class="project-card reveal tilt-card" data-tilt>
             <img src="https://blackbirdprojects.au/wp-content/uploads/2025/04/ktichen-image-1024x683.jpg" alt="Blackbird Projects kitchen renovation">
-            <div class="work-meta">
+            <div class="project-mask"></div>
+            <div class="project-meta">
               <span>Renovation</span>
-              <h3>East Toowoomba Residence</h3>
+              <h3>East Toowoomba Kitchen</h3>
+              <p>Natural light, better flow, and finishes that sharpen the whole home.</p>
             </div>
           </article>
-          <article class="work-card reveal">
+          <article class="project-card reveal tilt-card" data-tilt>
             <img src="https://blackbirdprojects.au/wp-content/uploads/2025/04/image-2-1.png" alt="Blackbird Projects bathroom detail">
-            <div class="work-meta">
+            <div class="project-mask"></div>
+            <div class="project-meta">
               <span>Bathroom</span>
               <h3>Garden Ensuite</h3>
+              <p>Quiet stone tones, careful joinery, and a more resolved daily routine.</p>
             </div>
           </article>
+          <article class="project-note glass-panel reveal media-layer" data-depth="8">
+            <span class="section-kicker">What You Feel</span>
+            <h3>Less visual noise. More proportion, texture, and confidence.</h3>
+            <p>That is the difference between a space that is simply updated and one that feels properly finished.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section why-blackbird" id="why-blackbird">
-      <div class="container why-layout">
-        <div class="why-copy reveal">
-          <span class="section-kicker">Why Choose Blackbird</span>
-          <h2>Trusted residential building with a calm, considered process.</h2>
+    <section class="section craftsmanship-section" id="craftsmanship">
+      <div class="container craftsmanship-layout">
+        <div class="craftsmanship-copy reveal">
+          <span class="section-kicker">Craftsmanship</span>
+          <h2>Material decisions matter because they shape how a home ages, feels, and functions.</h2>
           <p>
-            Good building is not just about the finish. It is about clear decisions, steady delivery,
-            and details resolved properly. Blackbird Projects brings that discipline to every home.
+            Blackbird Projects approaches residential building through detail, sequence, and finish.
+            The aim is not just to complete work. It is to create spaces that feel considered long after handover.
           </p>
-        </div>
-        <div class="why-points reveal-group">
-          <article class="why-card reveal">
-            <h3>Craftsmanship first</h3>
-            <p>Materials, proportions, and finishing are approached with care, not shortcuts.</p>
-          </article>
-          <article class="why-card reveal">
-            <h3>Communication that stays clear</h3>
-            <p>You know what is happening, what matters next, and what the project requires.</p>
-          </article>
-          <article class="why-card reveal">
-            <h3>Local experience that translates</h3>
-            <p>Homes built for the conditions, expectations, and character of the Darling Downs.</p>
-          </article>
-          <article class="why-card reveal">
-            <h3>Results that feel settled</h3>
-            <p>Spaces that look refined, function well, and hold their quality over time.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section testimonials" id="testimonials">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-kicker">Testimonials</span>
-          <h2>What clients value most is the way the process feels.</h2>
-        </div>
-        <div class="testimonial-grid reveal-group">
-          <article class="testimonial-card reveal">
-            <p>
-              "The communication stayed clear, the workmanship was excellent, and the whole project
-              felt well managed from start to finish."
-            </p>
-            <span>Custom Home Client | Toowoomba</span>
-          </article>
-          <article class="testimonial-card reveal">
-            <p>
-              "Our renovation feels seamless. The new work sits naturally with the original home,
-              and every detail feels properly resolved."
-            </p>
-            <span>Renovation Client | Darling Downs</span>
-          </article>
-          <article class="testimonial-card reveal">
-            <p>
-              "Professional, measured, and easy to deal with. The end result is refined without
-              feeling overdone."
-            </p>
-            <span>Bathroom Client | Toowoomba Region</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section final-cta" id="contact">
-      <div class="container">
-        <div class="cta-panel reveal">
-          <span class="section-kicker">Start the Conversation</span>
-          <h2>Planning a new home, renovation, bathroom, or ongoing maintenance?</h2>
-          <p>
-            Talk to Blackbird Projects about a residential build delivered with quality, clarity,
-            and care from the outset.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="mailto:hello@blackbirdprojects.com.au">Start Your Project</a>
-            <a class="button button-secondary" href="tel:+61000000000">Call Blackbird</a>
+          <div class="craft-values">
+            <div class="value-item reveal">
+              <strong>01</strong>
+              <span>Architectural thinking applied to real family homes</span>
+            </div>
+            <div class="value-item reveal">
+              <strong>02</strong>
+              <span>Measured project management and practical site clarity</span>
+            </div>
+            <div class="value-item reveal">
+              <strong>03</strong>
+              <span>Finishes selected for warmth, durability, and restraint</span>
+            </div>
           </div>
+        </div>
+        <div class="craftsmanship-visual reveal-group">
+          <div class="material-card material-card-main reveal tilt-card" data-tilt>
+            <img src="https://blackbirdprojects.au/wp-content/uploads/2025/04/image-2-1.png" alt="Blackbird Projects bathroom material detail">
+            <div class="material-caption">Stone, brass tone, soft lighting, clean detailing.</div>
+          </div>
+          <div class="material-card material-card-secondary reveal tilt-card" data-tilt>
+            <img src="https://blackbirdprojects.au/wp-content/uploads/2025/01/measure-up.jpg" alt="Blackbird Projects site measure and planning detail">
+            <div class="material-caption">A good result starts with careful measurement and control.</div>
+          </div>
+          <div class="material-stat glass-panel reveal media-layer" data-depth="10">
+            <span class="material-stat-number">Built for now.</span>
+            <p>Designed to still feel right years from now.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why-section" id="why-blackbird">
+      <div class="container why-layout">
+        <div class="why-story reveal">
+          <span class="section-kicker">Why Blackbird</span>
+          <h2>A builder with taste, local grounding, and enough discipline to execute well.</h2>
+          <p>
+            The difference is not just workmanship. It is the combined effect of communication,
+            scheduling, detail resolution, and an understanding of what makes residential work feel effortless in the end.
+          </p>
+          <div class="why-signals">
+            <div class="why-signal">
+              <strong>Measured</strong>
+              <span>Calm sequencing from early planning through final handover.</span>
+            </div>
+            <div class="why-signal">
+              <strong>Resolved</strong>
+              <span>Finishes, junctions, and proportions treated as part of the design.</span>
+            </div>
+          </div>
+        </div>
+        <div class="why-stack reveal-group">
+          <article class="why-panel why-panel-feature reveal">
+            <span class="why-index">01</span>
+            <h3>Attention to detail</h3>
+            <p>Proportions, trims, junctions, and finishes are treated as visible proof of care.</p>
+          </article>
+          <article class="why-panel reveal">
+            <span class="why-index">02</span>
+            <h3>Clear communication</h3>
+            <p>Clients stay informed with plain language, honest expectations, and fewer surprises.</p>
+          </article>
+          <article class="why-panel reveal">
+            <span class="why-index">03</span>
+            <h3>Reliable project management</h3>
+            <p>The process is structured so the work moves forward with confidence instead of friction.</p>
+          </article>
+          <article class="why-panel reveal">
+            <span class="why-index">04</span>
+            <h3>Local understanding</h3>
+            <p>Built around Darling Downs conditions, priorities, and the way local homes are actually used.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container testimonials-layout">
+        <div class="section-heading testimonials-heading reveal">
+          <span class="section-kicker">Client Feedback</span>
+          <h2>What stays with clients is not just the finish. It is how steady the process felt.</h2>
+          <p>Clear communication, measured delivery, and finishes that feel resolved are the themes clients return to again and again.</p>
+          <div class="testimonial-signals">
+            <div class="testimonial-signal">
+              <strong>Calm process</strong>
+              <span>Clients consistently describe the build experience as steady and well managed.</span>
+            </div>
+            <div class="testimonial-signal">
+              <strong>Resolved finish</strong>
+              <span>The final spaces feel integrated, refined, and natural to live in.</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-stage reveal-group">
+          <article class="testimonial-card testimonial-card-feature reveal">
+            <div class="quote-mark">"</div>
+            <span class="testimonial-tag">Featured story</span>
+            <p>The communication stayed clear, the workmanship was excellent, and the whole project felt well managed from start to finish.</p>
+            <span class="testimonial-attribution">Custom Home Client | Toowoomba</span>
+          </article>
+          <article class="testimonial-card reveal">
+            <div class="quote-mark">"</div>
+            <span class="testimonial-tag">Renovation</span>
+            <p>Our renovation feels seamless. The new work sits naturally with the original home, and every detail feels properly resolved.</p>
+            <span class="testimonial-attribution">Renovation Client | Darling Downs</span>
+          </article>
+          <article class="testimonial-card reveal">
+            <div class="quote-mark">"</div>
+            <span class="testimonial-tag">Bathroom</span>
+            <p>Professional, measured, and easy to deal with. The end result is refined without feeling overdone.</p>
+            <span class="testimonial-attribution">Bathroom Client | Toowoomba Region</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section enquiry-section" id="contact">
+      <div class="container">
+        <div class="enquiry-shell reveal">
+          <div class="enquiry-heading">
+            <span class="section-kicker">Contact</span>
+            <h2>Enquiry Form</h2>
+            <p>Tell Blackbird Projects what you are planning and the team can follow up with the right next step.</p>
+          </div>
+
+          <form class="enquiry-form" action="mailto:hello@blackbirdprojects.com.au" method="post" enctype="text/plain">
+            <div class="enquiry-grid enquiry-grid-split">
+              <label class="field">
+                <span>Name</span>
+                <input type="text" name="name" autocomplete="name" required>
+              </label>
+              <label class="field">
+                <span>Phone</span>
+                <input type="tel" name="phone" autocomplete="tel">
+              </label>
+            </div>
+
+            <div class="enquiry-grid">
+              <label class="field">
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" required>
+              </label>
+            </div>
+
+            <div class="enquiry-grid">
+              <label class="field">
+                <span>Address</span>
+                <input type="text" name="address" autocomplete="street-address">
+              </label>
+            </div>
+
+            <div class="enquiry-grid">
+              <label class="field field-message">
+                <span>How Can We Help?</span>
+                <textarea name="message" rows="4" required></textarea>
+              </label>
+            </div>
+
+            <fieldset class="service-options">
+              <legend>Project Type</legend>
+              <label><input type="checkbox" name="project_type" value="New Homes"> <span>New Homes</span></label>
+              <label><input type="checkbox" name="project_type" value="Renovations"> <span>Renovations</span></label>
+              <label><input type="checkbox" name="project_type" value="Extensions"> <span>Extensions</span></label>
+              <label><input type="checkbox" name="project_type" value="Bathrooms"> <span>Bathrooms</span></label>
+              <label><input type="checkbox" name="project_type" value="Maintenance"> <span>Maintenance</span></label>
+            </fieldset>
+
+            <div class="enquiry-actions">
+              <button class="button enquiry-submit" type="submit">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -252,7 +406,9 @@
     <div class="container footer-layout">
       <div>
         <a class="brand footer-brand" href="#top">
-          <span class="brand-mark">B</span>
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/logo-blackbird-provided.png" alt="">
+          </span>
           <span class="brand-text">
             <strong>Blackbird</strong>
             <span>Projects</span>
@@ -262,8 +418,8 @@
       </div>
       <div class="footer-links">
         <a href="#services">Services</a>
-        <a href="#work">Featured Work</a>
-        <a href="#why-blackbird">Why Blackbird</a>
+        <a href="#projects">Projects</a>
+        <a href="#craftsmanship">Craftsmanship</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-meta">

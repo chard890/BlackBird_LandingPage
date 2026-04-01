@@ -1,8 +1,15 @@
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
-const heroMedia = document.querySelector(".hero-media img");
 const revealItems = document.querySelectorAll(".reveal");
+const hero = document.querySelector(".hero");
+const root = document.documentElement;
+const tiltCards = document.querySelectorAll("[data-tilt]");
+const magneticItems = document.querySelectorAll(".magnetic");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const finePointer = window.matchMedia("(pointer:fine)").matches;
+let mouseFrame = null;
+let mouseState = { x: 0, y: 0 };
 
 const syncHeader = () => {
   if (!header) {
@@ -10,6 +17,10 @@ const syncHeader = () => {
   }
 
   header.classList.toggle("is-scrolled", window.scrollY > 24);
+
+  if (!prefersReducedMotion) {
+    root.style.setProperty("--scroll-shift", `${Math.min(window.scrollY * 0.08, 28)}px`);
+  }
 };
 
 const closeMenu = () => {
@@ -33,16 +44,65 @@ if (menuToggle && nav) {
   });
 }
 
-window.addEventListener("scroll", () => {
-  syncHeader();
-
-  if (heroMedia && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const offset = Math.min(window.scrollY * 0.05, 22);
-    heroMedia.style.transform = `translateY(${offset}px) scale(1.06)`;
-  }
-}, { passive: true });
-
+window.addEventListener("scroll", syncHeader, { passive: true });
 syncHeader();
+
+if (!prefersReducedMotion && hero && finePointer) {
+  const updateHeroMotion = () => {
+    root.style.setProperty("--hero-x", `${mouseState.x}px`);
+    root.style.setProperty("--hero-y", `${mouseState.y}px`);
+    mouseFrame = null;
+  };
+
+  hero.addEventListener("mousemove", (event) => {
+    const bounds = hero.getBoundingClientRect();
+    const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 24;
+    const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 20;
+    mouseState = { x, y };
+
+    if (!mouseFrame) {
+      mouseFrame = window.requestAnimationFrame(updateHeroMotion);
+    }
+  });
+
+  hero.addEventListener("mouseleave", () => {
+    mouseState = { x: 0, y: 0 };
+
+    if (!mouseFrame) {
+      mouseFrame = window.requestAnimationFrame(updateHeroMotion);
+    }
+  });
+}
+
+if (!prefersReducedMotion && finePointer) {
+  tiltCards.forEach((card) => {
+    card.addEventListener("mousemove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const offsetX = (event.clientX - rect.left) / rect.width - 0.5;
+      const offsetY = (event.clientY - rect.top) / rect.height - 0.5;
+      const rotateX = offsetY * -8;
+      const rotateY = offsetX * 10;
+      card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
+  });
+
+  magneticItems.forEach((item) => {
+    item.addEventListener("mousemove", (event) => {
+      const rect = item.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 18;
+      const y = ((event.clientY - rect.top) / rect.height - 0.5) * 14;
+      item.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    item.addEventListener("mouseleave", () => {
+      item.style.transform = "";
+    });
+  });
+}
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((entries) => {
@@ -54,10 +114,11 @@ if ("IntersectionObserver" in window) {
       window.setTimeout(() => {
         entry.target.classList.add("is-visible");
       }, index * 70);
+
       observer.unobserve(entry.target);
     });
   }, {
-    threshold: 0.18,
+    threshold: 0.15,
     rootMargin: "0px 0px -10% 0px"
   });
 
